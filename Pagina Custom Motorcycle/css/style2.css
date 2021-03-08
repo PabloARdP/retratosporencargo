@@ -81,6 +81,7 @@ body{
 			color:#454545;
 		}
 
+
 .imagen{
 	display: grid;
 	grid-area: imagen;
@@ -96,8 +97,15 @@ body{
 	h2{
 		color:#F5F5F5;
 		margin:30px;
-
 	}
+	.añadir{
+		font-size: 30px;
+		margin-top: 10px;
+	}
+	.añadir:hover{
+		color:#9F1B1B;
+	}
+
 
 .descripcion{
 	grid-area: descripcion;
