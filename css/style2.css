@@ -1,0 +1,176 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: roboto, sans serif;
+}
+
+body{
+	background-image: url(../images/lineas.svg);
+	background-size: cover;
+	}
+
+.cuadricula{
+	width:100%;
+
+	display:grid;
+	grid-template-columns: repeat(2,1fr);
+  	grid-template-rows: 100px 1fr 100px 100px 110px;
+  	grid-gap:10px;
+
+  	grid-template-areas: 
+  	"header header"
+  	"imagen descripcion" 
+  	"uno dos" 
+  	"tres cuatro" 
+  	"footer footer";
+}
+
+.header{
+	grid-area: header;
+
+	display:grid;
+	grid-template-columns: 0.5fr 1fr 0.5fr;
+  	grid-template-rows: 1fr;
+  	grid-gap:10px;
+  	color:#454545;
+
+  	grid-template-areas: 
+  	"logo botonera sesion";
+}
+		a{
+			text-decoration: none;
+			color:#454545;
+		}
+		.logo{
+			grid-area: logo;
+			display:flex;
+			align-items: center;
+		}
+
+				h1{
+					margin-right: 20px;
+					font-size: 20px;
+					font-family: megrim, sans serif;
+					color:#454545;
+				}
+
+		.botonera{
+			grid-area: botonera;
+			display:flex;
+			align-items: center;
+			justify-content:center;
+			grid-gap:20px;
+			color:#454545;
+		}
+
+			li{
+				list-style:none;
+			}
+
+		.sesion{
+			grid-area: sesion;
+			display:flex;
+			align-items: center;
+			justify-content:flex-end;
+			grid-gap:15px;
+			color:#454545;
+		}
+
+		.hamburguesa{
+			display:none;
+			color:#454545;
+		}
+
+.imagen{
+	display: grid;
+	grid-area: imagen;
+	border-radius: 20px;
+	margin: 50px;
+	margin-top: 0px;
+	max-width:1000px;
+	height: 450px;
+	background-image: url(../images/motos/1.jpg);
+	background-size: cover;
+}
+
+	h2{
+		color:#F5F5F5;
+		margin:30px;
+
+	}
+
+.descripcion{
+	grid-area: descripcion;
+	justify-content: flex-end;
+	align-items: flex-start;
+	margin: 50px;
+	margin-top: 0px;
+	max-width:1000px;
+	color:#454545;
+}
+
+	.titulo{
+		font-size: 20px;
+	}
+
+	.texto{
+		color:#6B6B6B;
+	}
+
+.datos{
+	display:grid;
+	grid-area: datos1;
+	padding-left: 20px;
+	justify-content: flex-start;
+	align-items: center;
+	max-width:1000px;
+	height: 80px;
+	background-color: #C4C4C4;
+	color:#454545;
+	margin: 50px;
+	border-radius: 20px;
+}
+
+.uno{
+	grid-area: uno;
+}
+.dos{
+	grid-area: dos;
+}
+.tres{
+	grid-area: tres;
+}
+.cuatro{
+	grid-area: cuatro;
+}
+
+
+@media screen  and (max-width:850px){
+
+	.botonera{
+	display:none;
+	}
+	.hamburguesa{
+			display: flex;
+		}
+}
+
+
+
+@media screen  and (max-width:900px){
+
+.cuadricula{
+
+	grid-template-columns: repeat(2,1fr);
+  	grid-template-rows: 100px 1fr 0.5fr 100px 100px 110px;
+  	grid-gap:10px;
+
+  	grid-template-areas: 
+  	"header header"
+  	"imagen imagen" 
+  	"descripcion descripcion" 
+  	"uno  dos" 
+  	"tres  cuatro" 
+  	"footer footer";
+}
+

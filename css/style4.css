@@ -1,0 +1,184 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: roboto, sans serif;
+}
+
+body{
+	background-image: url(../images/lineas.svg);
+	background-size: cover;
+	}
+
+.cuadricula{
+	width:100%;
+
+	display:grid;
+	grid-template-columns: 1fr;
+  	grid-template-rows: 100px ;
+  	grid-gap:10px;
+
+  	grid-template-areas: 
+  	"header";
+  }
+
+.box{
+	padding:10px;
+}
+
+.header{
+	grid-area: header;
+
+	display:grid;
+	grid-template-columns: 0.5fr 1fr 0.5fr;
+  	grid-template-rows: 1fr;
+  	grid-gap:10px;
+  	color:#454545;
+
+  	grid-template-areas: 
+  	"logo botonera sesion";
+}
+		a{
+			text-decoration: none;
+			color:#454545;
+		}
+		.logo{
+			grid-area: logo;
+			display:flex;
+			align-items: center;
+		}
+
+				h1{
+					margin-right: 20px;
+					font-size: 20px;
+					font-family: megrim, sans serif;
+					color:#454545;
+				}
+
+		.botonera{
+			grid-area: botonera;
+			display:flex;
+			align-items: center;
+			justify-content:center;
+			grid-gap:20px;
+			color:#454545;
+		}
+
+			li{
+				list-style:none;
+			}
+
+		.sesion{
+			grid-area: sesion;
+			display:flex;
+			align-items: center;
+			justify-content:flex-end;
+			grid-gap:15px;
+			color:#454545;
+		}
+
+		.hamburguesa{
+			display:none;
+			color:#454545;
+		}
+
+.bienvenida{
+	width: 100%;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color:#454545;
+}
+
+.texto{
+	height: 40vh;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.logotipo2{
+	font-size: 60px;
+	font-family: megrim;
+	font-weight: 200;
+}
+
+h3{
+	font-size: 50px;
+	font-weight: 500;
+	margin:5px;
+}
+
+.cards{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tarjeta{
+	width:300px;
+	height: 300px;
+	background-color: #A5A5A5;
+	margin:30px;
+	border-radius: 20px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.tutoriales{
+	background-image: url(../images/tutorial.jpg);
+	background-size: cover;
+}
+.mecanica{
+	background-image: url(../images/mecanica.jpg);
+	background-size: cover;
+}
+.off{
+	background-image: url(../images/off.jpg);
+	background-size: cover;
+}
+
+
+hr {
+  width: 180px;
+  height: 2px;
+  background-color:#F2F2F2;
+  border:none;
+}
+
+h4{
+	margin:10px;
+	color:#F2F2F2;
+	font-weight: 500;
+}
+
+
+@media screen  and (max-width:1070px){
+.cards{
+	flex-direction: column;
+}
+
+@media screen  and (max-width:850px){
+	.botonera{
+	display:none;
+	}
+	.hamburguesa{
+			display: flex;
+		}
+}
+
+@media screen  and (max-width:600px){
+	h3{
+		font-size: 25px;
+	}
+	.logotipo2{
+		font-size: 30px;
+	}
+
+	.texto{
+		height: 200px;
+	}
